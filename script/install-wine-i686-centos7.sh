@@ -13,7 +13,7 @@ log=`mktemp -t install-wine.XXXXXX.log`
 
 # Install
 
-ver=1.8.5
+ver=2.0.2
 
 echo "Hello there. Start to download, build and install wine $ver 32-bit and 64-bit versions..." | tee $log
 echo "Logs are in $log" | tee -a $log
@@ -32,8 +32,8 @@ yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x8
 echo "Download and unpack the wine source package..." 2>&1 | tee -a $log
 
 cd /usr/src 2>&1 >> $log
-wget http://dl.winehq.org/wine/source/1.8/wine-${ver}.tar.bz2 -O wine-${ver}.tar.bz2 2>&1 >> $log
-tar xjf wine-${ver}.tar.bz2 2>&1 >> $log
+wget http://dl.winehq.org/wine/source/2.0/wine-${ver}.tar.bz2 -O wine-${ver}.tar.xz 2>&1 >> $log
+tar xjf wine-${ver}.tar.xz 2>&1 >> $log
 
 echo "Build wine..." 2>&1 | tee -a $log
 cd wine-${ver}/ 2>&1 >> $log
