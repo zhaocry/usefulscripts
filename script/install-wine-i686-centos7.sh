@@ -32,7 +32,7 @@ yum install glibc-devel.{i686,x86_64} libgcc.{i686,x86_64} libX11-devel.{i686,x8
 echo "Download and unpack the wine source package..." 2>&1 | tee -a $log
 
 cd /usr/src 2>&1 >> $log
-wget http://dl.winehq.org/wine/source/2.0/wine-${ver}.tar.bz2 -O wine-${ver}.tar.xz 2>&1 >> $log
+wget http://dl.winehq.org/wine/source/2.0/wine-${ver}.tar.xz -O wine-${ver}.tar.xz 2>&1 >> $log
 tar xjf wine-${ver}.tar.xz 2>&1 >> $log
 
 echo "Build wine..." 2>&1 | tee -a $log
