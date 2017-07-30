@@ -33,7 +33,7 @@ echo "Download and unpack the wine source package..." 2>&1 | tee -a $log
 
 cd /usr/src 2>&1 >> $log
 wget http://dl.winehq.org/wine/source/2.0/wine-${ver}.tar.xz -O wine-${ver}.tar.xz 2>&1 >> $log
-tar xjf wine-${ver}.tar.xz 2>&1 >> $log
+tar xvJf wine-${ver}.tar.xz 2>&1 >> $log
 
 echo "Build wine..." 2>&1 | tee -a $log
 cd wine-${ver}/ 2>&1 >> $log
